@@ -10,7 +10,7 @@
      <title>Online Attendance</title>
 </head>
 
-<body>
+<body> 
 <form class="form-signin"  action = "<?php echo base_url('index.php/login/auth');?>" method = "post">
           <h1 class="welcome">Welcome</h1>
           <p class="continue">Login to Continue.</p>

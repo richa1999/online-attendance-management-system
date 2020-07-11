@@ -22,24 +22,41 @@ class Login extends CI_Controller {
             $data     = $result->row_array();
             $username = $data['username'];
             $role    = $data['role'];
+            $name  = $data['name'];
             $sesdata  = array(
                 'username' => $username,
+                'name' => $name,
                 'role'    => $role,
                 'logged_in'=> TRUE                
             );
             $this->session->set_userdata($sesdata);
+            
             if($role === 'admin')
             {
-                redirect('hod/register');
+                redirect('admin/register');
             }
-            elseif($role ==='student'){
-                redirect('students/student');
+            else if($role === 'teacher')
+            {
+              redirect('teachers/teacher_portal');
+            }
+            else if($role === 'student'){
+
+                redirect('students/student_portal');
+            }
+            else if($role === 'hod')
+            {
+              redirect('hod/register');
             }
             else
             {
                 echo "<script>alert('access denied');history.go(-1);</script>";
             }
-            // $this->load->view('login_view');
         }
+    }
+
+   function logout()
+    {
+        $this->session->sess_destroy();
+        redirect('Login');
     }
 }

@@ -5,11 +5,11 @@ class Register extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
-		$this->load->model('admin/register_teacher');
+		$this->load->model('hod/register_teacher');
     }
 	public function index()
 	{
-		$this->load->view('admin/register');
+		$this->load->view('hod/register');
 	}
 
 	public function register_teacher()
@@ -19,7 +19,7 @@ class Register extends CI_Controller {
 		$email  = $this->input->post('email');
 		$password = $this->input->post('password');
 		$dept   = $this->input->post('dept');
-	    $role   = "teacher";
+	    $role   = "hod";
 		$data   = array(
 			'name'   => $name,
 			'mobile' => $mobile,
@@ -27,6 +27,7 @@ class Register extends CI_Controller {
 		    'dept'   => $dept
 		);
 		$credential = array(
+			'name'  => $name,
 			'username' => $email,
 			'password' => $password,
 			'role'     => $role
@@ -34,7 +35,7 @@ class Register extends CI_Controller {
 		$a = $this->register_teacher->check_email($data['email']);
 		if(!empty($a))
 		{
-			$this->load->view('admin/register');
+			$this->load->view('hod/register');
 		}
 		else
 		{
