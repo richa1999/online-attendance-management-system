@@ -1,4 +1,3 @@
-<!-- <?php $this->load->view('students/header') ?> -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,37 +25,23 @@
                 </div>
 			</div>
 			<div class="col">
-				<h1 id="account">My Profile</h1>
-				<p id="acc">Here are your personal details.No changes can be done here!!</p>
+				<h1 id="account">Account</h1>
+				<p id="acc">Edit your account settings and change your password here.</p>
 				<hr>
 				<form>
 				  <div class="form-group mt-5">
-				    <label for="name">Your Name:</label>
-				    <p class="id">Vartika Jain</p>
-				     <label for="dob">D.O.B.</label>
-				    <p class="id">27/07/2000</p>
-				     <label for="gender">Gender:</label>
-				    <p class="id">Female</p>
-				     <label for="roll">Roll No.</label>
-				    <p class="id">1803211060</p>
-				     <label for="admisison">Admission No.</label>
-				    <p class="id">2018bci1059</p>
-				     <label for="number">Mobile no.</label>
-				    <p class="id">9911361775</p>
-				     <label for="course">Course:</label>
-				    <p class="id">BTech</p>
-				     <label for="branch">Branch:</label>
-				    <p class="id">CEIT</p>
-				     <label for="semester">Semester:</label>
-				    <p class="id">v</p>
-				     <label for="year">Year:</label>
-				    <p class="id">2020</p>
-				     <label for="fname">Father's Name:</label>
-				    <p class="id">Sanjay Jain</p>
-				     <label for="mname">Mother's Name:</label>
-				    <p class="id">Rajni Jain</p>
+				    <label for="exampleInputEmail1">Email address</label>
+				    <p id="id">jainvartika2707@gmail.com</p>
+				    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 				  </div>
 				  <hr>
+				  <div class="form-group">
+				    <label for="exampleInputPassword1">Password</label>
+				    <input type="password" class="form-control mb-3" id="exampleInputPassword1" placeholder="Enter Current Password">
+				     <input type="password" class="form-control mb-3" id="exampleInputPassword1"  placeholder="Enter New Password">
+				      <input type="password" class="form-control mb-3" id="exampleInputPassword1"  placeholder="Re-Enter New Password">
+				  </div>
+				  <button type="submit" class="btn btn-danger">Change Password</button>
 				</form>
 
 			</div>

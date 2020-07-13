@@ -10,4 +10,12 @@ class Profile extends CI_Controller {
 	{
 		$this->load->view('students/profile3');
 	}
+	public function profile3()
+	{
+		$this->load->view('students/profile3');
+	}
+	public function profile2()
+	{
+		$this->load->view('students/profile2');
+	}
 }

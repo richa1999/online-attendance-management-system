@@ -1,4 +1,4 @@
-<?php $this->load->view('students/header') ?>
+
 <!DOCTYPE html>
 <html>
 <head>

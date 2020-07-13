@@ -9,7 +9,11 @@
   font-size: 17px;
   border: none;
   cursor: pointer;
+  position:absolute;
+  top:-328px;
+  right:300px;
 }
+
 .search-container {
   float: right;
   
@@ -17,60 +21,93 @@
 .search-container button:hover {
   background: #ccc;
 }
+.select{
+   
+    position:relative;
+    top:-200px;
+    left:250px;
+    margin: 5px;
+    display:inline-block;
+    font-size:25px;
+
+}
+.showList{
+    margin:20px;
+    position:relative;
+    top:-170px;
+    width:40%;
+    left:300px;
+}
+input{
+     position:relative;
+    top:-320px;
+    width:400%;
+    left:-900px;
+}
+.form-control{
+    width:50%;
+}
+.table_responsive{
+    position:absolute;
+    top:150px;
+}
 </style>
      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
      <div class="search-container">
               <form action="/action_page.php">
-               <input type="text" placeholder="Search.." name="search">
+               <input type="text" placeholder="Search.." name="search" id="input">
                <button type="submit"><i class="fa fa-search"></i></button>
                </form>
               </div>
               <form class="registered_student_form" action=<?php echo base_url('index.php/admin/registered_users/students');?> method = "post">
-     <div class="row">
-              
-                      <div class="select">
-                                    <label for="course">Course*</label>
-                                    <select id="course" name="course">
-                                        <option value="">Select Course</option>
-                                        <option value="Btech">Btech</option>
-                                        <option value="Mtech">Mtech</option>
-                                    </select>
-                                </div>
-              
-                                <div class="select">
-                                    <label for="branch">Branch*</label>
-                                    <select id="branch" name="branch">
-                                        <option value="">Select Branch</option>
-                                        <option value="ceit">CEIT</option>
-                                        <option value="cs">CS</option>
-                                    </select>
-                                </div>
-                                <div class="select">
-                                    <label for="year">Year*</label>
-                                    <select id="year" name="year">
-                                        <option value="">Select Year</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                    </select>
-                                </div>
-                                <div class="select">
-                                    <label for="Sem">Semester*</label>
-                                    <select id="Sem" name="Sem">
-                                        <option value="">Select Sem</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                    </select>
-                                </div>
-               <button class="btn btn-primary btn-sm showList" type="submit">Submit</button>
-          </div>
+                 <div class="row">
+                                    <div class="form-group col-md-4 select" >
+                                        <label for="inputState"><b> Course</b></label>
+                                        <select id="inputState" class="form-control" name="course">
+                                            <option selected>Choose...</option>
+                                            <option>BTech</option>
+                                            <option>MBA</option>
+                                        </select>
+                                    </div>                  
+                                    <div class="form-group col-md-4 select">
+                                        <label for="inputState"><b>Branch</b></label>
+                                        <select id="inputState" class="form-control" name="branch">
+                                            <option selected>Choose...</option>
+                                            <option>CEIT</option>
+                                            <option>CS</option>
+                                            <option>IT</option>
+                                            <option>ECE</option>
+                                            <option>EN</option>
+                                            <option>MECH</option>
+                                            <option>CE</option>
+                                        </select>
+                                    </div>                  
+                                    <div class="form-group col-md-4 select">
+                                        <label for="inputState"><b>Year</b></label>
+                                        <select id="inputState" class="form-control" name="year">
+                                            <option selected>Choose...</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                    </div>                  
+                                    <div class="form-group col-md-4 select">
+                                        <label for="inputState"><b>Semester</b></label>
+                                        <select id="inputState" class="form-control" name="semester">
+                                            <option selected>Choose...</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                        </select>
+                                    </div>                        
+               <button class="btn btn-primary btn-sm showList" type="submit">Search</button>
+        
           </form>
           <div class="table_responsive">
              <table class = "table table-bordered">
