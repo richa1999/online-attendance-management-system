@@ -15,7 +15,7 @@
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
           <link rel="stylesheet" href="assets/bootstrap.css">
-     <link rel="stylesheet" href="assets/admin/css/home.css">
+     <link rel="stylesheet" href="<?php echo base_url() ?>assets/admin/css/home.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
      <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -34,20 +34,17 @@
 
      <div class="container-fluid">
           <div class="row">
-               <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+               <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block bg-light sidebar collapse">
                     <div class="sidebar-sticky pt-3">
                          <ul class="nav flex-column">
-                              <li class="nav-item">
-                                   <a class="nav-link" href="#">
-                                        <svg class="bi bi-house" width="1em" height="1em" viewBox="0 0 16 16"
+                         <li class="nav-item">
+                                   <a class="nav-link " href="<?php echo base_url('index.php/admin/register');?>">
+                                        <svg class="bi bi-list-check" width="1em" height="1em" viewBox="0 0 16 16"
                                              fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                              <path fill-rule="evenodd"
-                                                  d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
-                                             <path fill-rule="evenodd"
-                                                  d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                                                  d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z" />
                                         </svg>
-                                        <span data-feather="home"></span>
-                                        Home
+                                        Register
                                    </a>
                               </li>
                               <li class="nav-item">
@@ -123,16 +120,7 @@
                                         Academic Calender
                                    </a>
                               </li>
-                              <li class="nav-item">
-                                   <a class="nav-link active" href="<?php echo base_url('index.php/admin/register');?>">
-                                        <svg class="bi bi-list-check" width="1em" height="1em" viewBox="0 0 16 16"
-                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                             <path fill-rule="evenodd"
-                                                  d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z" />
-                                        </svg>
-                                        Register
-                                   </a>
-                              </li>
+                              
                               <li class="nav-item logOutBtn">
                                    <a class="nav-link text-danger" href="<?php echo base_url('index.php/Login/logout');?>">
                                         Log Out
@@ -143,4 +131,5 @@
                </nav>
           </div>
      </div>
+     
      </body>

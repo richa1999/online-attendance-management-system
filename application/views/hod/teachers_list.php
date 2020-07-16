@@ -9,13 +9,46 @@
   font-size: 17px;
   border: none;
   cursor: pointer;
+  position:absolute;
+  top:-328px;
+  right:300px;
 }
+.select{
+   
+   position:relative;
+   top:-200px;
+   left:250px;
+   margin: 5px;
+   display:inline-block;
+   font-size:25px;
+   text-align:center;
+   
+
+}
+.showList{
+     margin:50px;
+    position:relative;
+    top:-197px;
+    width:10%;
+    left:200px;
+}
+
 .search-container {
   float: right;
   
 }
 .search-container button:hover {
   background: #ccc;
+}
+input{
+     position:relative;
+    top:-320px;
+    width:400%;
+    left:-900px;
+}
+.table_responsive{
+     position:relative;
+     top:-150px;
 }
 </style>
      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
@@ -26,18 +59,24 @@
                </form>
               </div>
               <form class="registered_teacher_form" action=<?php echo base_url('index.php/hod/registered_users/teachers');?> method = "post">
-     <div class="row">
+              <div class="row" style="margin-top:350px;">
               
-                      <div class="select">
-                                    <label for="dept">Department*</label>
-                                    <select id="dept" name="dept">
-                                        <option value="">Select Department</option>
-                                        <option value="ceit">CEIT</option>
-                                        <option value="cs">CS</option>
-                                    </select>
-                                </div>
-               <button class="btn btn-primary btn-sm showList" type="submit">Submit</button>
-          </div>
+              <div class="form-group col-md-4 select">
+                      <label for="inputState"><b>Department</b></label>
+                      <select id="inputState" class="form-control" name="dept">
+                          <option selected>Select Department...</option>
+                          <option>CEIT</option>
+                          <option>CS</option>
+                          <option>IT</option>
+                          <option>ECE</option>
+                          <option>EN</option>
+                          <option>MECH</option>
+                          <option>CE</option>
+
+                      </select>
+                  </div>         
+<button class="btn btn-primary btn-sm showList" type="submit">Search</button>
+</div>
           </form>
           <div class="table_responsive">
              <table class = "table table-bordered">
@@ -73,6 +112,7 @@
          </table>
           </div>
      </main>
+     <?php $this->load->view('footer.php') ?>
 </body>
 
 </html>

@@ -15,13 +15,9 @@
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
           integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
           crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="assets/teachers/home.css">
+     <link rel="stylesheet" href="sidebar.css">
 
-
-     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-     <title>Home</title>
+     <title>Academic Calender</title>
 </head>
 
 <body>
@@ -44,15 +40,15 @@
           </button>
      </nav>
 
-     <div class="container-fluid">
+     <div class="container-fluid float-right">
           <div class="row">
                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                     <div class="sidebar-sticky pt-3">
                          <ul class="nav flex-column">
                               <li class="nav-item">
-                                   <a class="nav-link active" href="#">
-                                        <svg class="bi bi-house" width="1em" height="1em" viewBox="0 0 16 16"
-                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                   <a class="nav-link" href="dashboard.html">
+                                        <svg class="bi bi-house" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                                             xmlns="http://www.w3.org/2000/svg">
                                              <path fill-rule="evenodd"
                                                   d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
                                              <path fill-rule="evenodd"
@@ -64,8 +60,8 @@
                               </li>
                               <li class="nav-item">
                                    <a class="nav-link" href="list.html">
-                                        <svg class="bi bi-list-check" width="1em" height="1em" viewBox="0 0 16 16"
-                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="bi bi-list-check" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                                             xmlns="http://www.w3.org/2000/svg">
                                              <path fill-rule="evenodd"
                                                   d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z" />
                                         </svg>
@@ -74,8 +70,8 @@
                               </li>
                               <li class="nav-item">
                                    <a class="nav-link" href="attendance.html">
-                                        <svg class="bi bi-check2-circle" width="1em" height="1em" viewBox="0 0 16 16"
-                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="bi bi-check2-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                                             xmlns="http://www.w3.org/2000/svg">
                                              <path fill-rule="evenodd"
                                                   d="M15.354 2.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L8 9.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
                                              <path fill-rule="evenodd"
@@ -86,10 +82,9 @@
                               </li>
                               <li class="nav-item">
                                    <a class="nav-link" href="#">
-                                        <svg class="bi bi-alarm" width="1em" height="1em" viewBox="0 0 16 16"
-                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                             <path fill-rule="evenodd"
-                                                  d="M8 15A6 6 0 1 0 8 3a6 6 0 0 0 0 12zm0 1A7 7 0 1 0 8 2a7 7 0 0 0 0 14z" />
+                                        <svg class="bi bi-alarm" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" d="M8 15A6 6 0 1 0 8 3a6 6 0 0 0 0 12zm0 1A7 7 0 1 0 8 2a7 7 0 0 0 0 14z" />
                                              <path fill-rule="evenodd"
                                                   d="M8 4.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.053.224l-1.5 3a.5.5 0 1 1-.894-.448L7.5 8.882V5a.5.5 0 0 1 .5-.5z" />
                                              <path
@@ -102,9 +97,9 @@
                                    </a>
                               </li>
                               <li class="nav-item">
-                                   <a class="nav-link" href="#">
-                                        <svg class="bi bi-table" width="1em" height="1em" viewBox="0 0 16 16"
-                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                   <a class="nav-link active" href="#">
+                                        <svg class="bi bi-table" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                                             xmlns="http://www.w3.org/2000/svg">
                                              <path fill-rule="evenodd"
                                                   d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
                                              <path fill-rule="evenodd" d="M15 4H1V3h14v1z" />
@@ -113,16 +108,6 @@
                                              <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2H0V2z" />
                                         </svg>
                                         Academic Calender
-                                   </a>
-                              </li>
-                              <li class="nav-item">
-                                   <a class="nav-link" href="register.html">
-                                        <svg class="bi bi-list-check" width="1em" height="1em" viewBox="0 0 16 16"
-                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                             <path fill-rule="evenodd"
-                                                  d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z" />
-                                        </svg>
-                                        Register
                                    </a>
                               </li>
                               <li class="nav-item logOutBtn">
@@ -135,67 +120,10 @@
                </nav>
           </div>
      </div>
-
      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-          <div id="linechart-ceit" class="line-chart"></div>
-          <div id="linechart-cs-a" class="line-chart"></div>
+          <iframe src="./OddSem.pdf" style="width:100%; height:90vh;"></iframe>
      </main>
-
-
-     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-     <script type="text/javascript">
-          google.charts.load('current', { 'packages': ['corechart'] });
-          google.charts.setOnLoadCallback(drawChart);
-
-          // Draw the chart and set the chart values
-          // function drawChart() {
-          //      var jsonData = $.ajax({
-          //           url: "getData.php",
-          //           dataType: "json",
-          //           async: false
-          //      }).responseText;
-          let dataCeit = google.visualization.arrayToDataTable([
-                    ['Task', 'No. of Students Present'],
-                    ['Monday', 45],
-                    ['Tuesday', 52],
-                    ['Wednesday', 64],
-                    ['Thursday', 60],
-                    ['Friday', 50],
-                    ['Saturday', 24]
-               ]);
-
-               // Optional; add a title and set the width and height of the chart
-               let optionsCeit = {
-                    title: 'CEIT Attendance',
-                    curveType: 'function',
-                    legend: { position: 'bottom' }
-               };
-               let dataCs1 = google.visualization.arrayToDataTable([
-                    ['Task', 'No. of Students Present'],
-                    ['Monday', 45],
-                    ['Tuesday', 52],
-                    ['Wednesday', 64],
-                    ['Thursday', 60],
-                    ['Friday', 50],
-                    ['Saturday', 24]
-               ]);
-               // Optional; add a title and set the width and height of the chart
-               let optionsCs1 = {
-                    title: 'CS-A Attendance',
-                    curveType: 'function',
-                    legend: { position: 'bottom' }
-               };
-               // var data = new google.visualization.DataTable(jsonData);
-               // Display the chart inside the <div> element with id="piechart"
-               var chart = new google.visualization.LineChart(document.getElementById('linechart-ceit'));
-               chart.draw(dataCeit, optionsCeit);
-               var chart = new google.visualization.LineChart(document.getElementById('linechart-cs-a'));
-               chart.draw(dataCs1, optionsCs1);
-          
-     </script>
-
-
+     <?php $this->load->view('footer.php') ?>
 </body>
 
 </html>

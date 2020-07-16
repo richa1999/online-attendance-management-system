@@ -58,6 +58,6 @@
 	    	<td>6/8</td>
 	    </tr>
 	</table>
-
+	<?php $this->load->view('footer.php') ?>
 </body>
 </html>

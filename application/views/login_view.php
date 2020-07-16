@@ -38,6 +38,7 @@
           </div>
           <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
      </form>
+     <?php $this->load->view('footer.php') ?>
 </body>
 
 </html>

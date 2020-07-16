@@ -19,22 +19,6 @@ class Registered_users extends CI_Controller{
             'semester'=> $sem
         );
         $data["fetch_data"] = $this->registered_user->fetch_student($data_1);
-        $this->load->view('admin/student_list',$data);
+        $this->load->view('teachers/student_list',$data);
     }
-
-    public function teachers()
-    {
-        $dept = $this->input->post('dept');
-        $data["fetch_data"] = $this->registered_user->fetch_teacher($dept);
-        $this->load->view('admin/teachers_list',$data);
-    }
-
-    public function hod()
-    {
-        $dept = $this->input->post('dept');
-        $data["fetch_data"] = $this->registered_user->fetch_hod($dept);
-        $this->load->view('admin/hod_list', $data);
-    }
-
-    
 }

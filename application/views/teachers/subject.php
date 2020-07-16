@@ -1,4 +1,4 @@
-<?php $this->load->view('admin/header') ?>
+<?php $this->load->view('teachers/header') ?>
 <style>
 .search-container button {
   float: right;
@@ -53,14 +53,14 @@ input{
 }
 </style>
      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-     <div class="search-container" style="margin-top:5px">
+     <div class="search-container">
               <form action="/action_page.php">
-               <input type="text" placeholder="Search.." name="search" id="input">
+               <input type="text" placeholder="Search.." name="search">
                <button type="submit"><i class="fa fa-search"></i></button>
                </form>
               </div>
-              <form class="registered_student_form" action=<?php echo base_url('index.php/admin/registered_users/students');?> method = "post">
-                 <div class="row" style="margin-top:350px;">
+              <form class="registered_student_form" action=<?php echo base_url('index.php/teachers/subject/fetch_subject');?> method = "post">
+              <div class="row" style="margin-top:350px;">
                                     <div class="select" style=" width: 350px">
                                         <label for="course"><b> Course</b></label>
                                         <select id="course" class="form-control" name="course">
@@ -107,21 +107,15 @@ input{
                                         </select>
                                     </div>  
                  </div>                        
-               <button class="btn btn-primary btn-sm showList" type="submit">Search</button>
-        
+               <button class="btn btn-primary btn-sm showList" type="submit">Submit</button>
+          </div>
           </form>
           <div class="table_responsive">
-             <table class = "table table-bordered" >
+             <table class = "table table-bordered" style="margin-left:240px;">
              <tr>
-                 <th>Name</th>
-                 <th>Mobile</th>
-                 <th>Roll No.</th>
-                 <th>Admission No.</th>
-                 <th>Mother's Name</th>
-                 <th>Father's Name</th>
-                 <th>DOB</th>
-                 <th>Gender</th>
-                 <th>Email</th>
+                 <th>Subject Name</th>
+                 <th>Subject Code</th>
+                 <th>Faculty Name</th>
              </tr>
           <?php
           if($fetch_data->num_rows() > 0)
@@ -130,15 +124,34 @@ input{
                {
                     ?>
                        <tr>
-                         <td><?php echo $row->name; ?></td>
-                         <td><?php echo $row->mobile_number; ?></td>
-                         <td><?php echo $row->roll_number; ?></td>
-                         <td><?php echo $row->admission_number; ?></td>
-                         <td><?php echo $row->mothers_name; ?></td>
-                         <td><?php echo $row->fathers_name; ?></td>
-                         <td><?php echo $row->dob; ?></td>
-                         <td><?php echo $row->gender; ?></td>
-                         <td><?php echo $row->email; ?></td>
+                         <td><?php echo $row->sub_name_1; ?></td>
+                         <td><?php echo $row->sub_code_1; ?></td>
+                         <td><?php echo $row->faculty_1; ?></td>
+                         <tr>
+                         <td><?php echo $row->sub_name_2; ?></td>
+                         <td><?php echo $row->sub_code_2; ?></td>
+                         <td><?php echo $row->faculty_2; ?></td>
+                         </tr>
+                         <tr>
+                         <td><?php echo $row->sub_name_3; ?></td>
+                         <td><?php echo $row->sub_code_3; ?></td>
+                         <td><?php echo $row->faculty_3; ?></td>
+                         </tr>
+                         <tr>
+                         <td><?php echo $row->sub_name_4; ?></td>
+                         <td><?php echo $row->sub_code_4; ?></td>
+                         <td><?php echo $row->faculty_4; ?></td>
+                         </tr>
+                         <tr>
+                         <td><?php echo $row->sub_name_5; ?></td>
+                         <td><?php echo $row->sub_code_5; ?></td>
+                         <td><?php echo $row->faculty_5; ?></td>
+                         </tr>
+                         <tr>
+                         <td><?php echo $row->sub_name_6; ?></td>
+                         <td><?php echo $row->sub_code_6; ?></td>
+                         <td><?php echo $row->faculty_6; ?></td>
+                         </tr>
                     <?php
                }
           }

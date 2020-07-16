@@ -19,12 +19,14 @@ class Register extends CI_Controller {
 		$email  = $this->input->post('email');
 		$password = $this->input->post('password');
 		$dept   = $this->input->post('dept');
+		$course = $this->input->post('course');
 	    $role   = "hod";
 		$data   = array(
 			'name'   => $name,
 			'mobile' => $mobile,
 			'email'  => $email,
-		    'dept'   => $dept
+			'dept'   => $dept,
+			'course' => $course
 		);
 		$credential = array(
 			'name'  => $name,
@@ -35,11 +37,13 @@ class Register extends CI_Controller {
 		$a = $this->register_teacher->check_email($data['email']);
 		if(!empty($a))
 		{
-			$this->load->view('hod/register');
+			echo "<script>alert('Email id already registered!');history.go(-1);</script>";
 		}
 		else
 		{
 			$this->register_teacher->register($data,$credential);
+			echo "<script>alert('Registered Successfully');history.go(-1);</script>";
+			$this->load->view('admin/register');
 		}
 	}
 }

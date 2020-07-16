@@ -14,10 +14,13 @@
           crossorigin="anonymous"></script>
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-     <link rel="stylesheet" href="assets/admin/css/home.css">
+     <link rel="stylesheet" href="<?php echo base_url() ?>assets/admin/css/home.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
      <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   
+
+
 
      <title>Home</title>
 </head>
@@ -37,16 +40,10 @@
                     <div class="sidebar-sticky pt-3">
                          <ul class="nav flex-column">
                               <li class="nav-item">
-                                   <a class="nav-link" href="#">
-                                        <svg class="bi bi-house" width="1em" height="1em" viewBox="0 0 16 16"
-                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                             <path fill-rule="evenodd"
-                                                  d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
-                                             <path fill-rule="evenodd"
-                                                  d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
-                                        </svg>
-                                        <span data-feather="home"></span>
-                                        Home
+                                   <a class="nav-link" href="<?php echo base_url('index.php/hod/profile');?>">
+                                   <i class="fa fa-user"></i>
+                                        <span data-feather="profile"></span>
+                                        PROFILE
                                    </a>
                               </li>
                               <li class="nav-item">
@@ -82,7 +79,7 @@
                                    </a>
                               </li>
                               <li class="nav-item">
-                                   <a class="nav-link" href="<?php echo base_url('index.php/hod/set_subject');?>">
+                                   <a class="nav-link" href="<?php echo base_url('index.php/hod/set_subject/set_subject');?>">
                                         <svg class="bi bi-alarm" width="1em" height="1em" viewBox="0 0 16 16"
                                              fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                              <path fill-rule="evenodd"
@@ -95,7 +92,7 @@
                                                   d="M11.646 14.146a.5.5 0 0 1 .708 0l1 1a.5.5 0 0 1-.708.708l-1-1a.5.5 0 0 1 0-.708zm-7.292 0a.5.5 0 0 0-.708 0l-1 1a.5.5 0 0 0 .708.708l1-1a.5.5 0 0 0 0-.708zM5.5.5A.5.5 0 0 1 6 0h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z" />
                                              <path d="M7 1h2v2H7V1z" />
                                         </svg>
-                                        Time Table
+                                        Subjects
                                    </a>
                               </li>
                               <li class="nav-item">
@@ -113,7 +110,7 @@
                                    </a>
                               </li>
                               <li class="nav-item">
-                                   <a class="nav-link active" href="<?php echo base_url('index.php/hod/register');?>">
+                                   <a class="nav-link" href="<?php echo base_url('index.php/hod/register');?>">
                                         <svg class="bi bi-list-check" width="1em" height="1em" viewBox="0 0 16 16"
                                              fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                              <path fill-rule="evenodd"

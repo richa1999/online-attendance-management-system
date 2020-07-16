@@ -29,5 +29,6 @@
 	</div>
 	
 	<script type="text/javascript" src="<?php echo base_url() ?>assets/student/css/notification.js"></script>
+	<?php $this->load->view('footer.php') ?>
 </body>
 </html>

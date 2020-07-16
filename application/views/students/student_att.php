@@ -48,4 +48,5 @@
  
      
      <script type="text/javascript" src="profile.js"></script>
+     <?php $this->load->view('footer.php') ?>
 </body>

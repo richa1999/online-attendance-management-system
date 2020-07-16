@@ -52,6 +52,6 @@
 	    	<td>68%</td>
 	    </tr>
 	</table>
-
+	<?php $this->load->view('footer.php') ?>
 </body>
 </html>

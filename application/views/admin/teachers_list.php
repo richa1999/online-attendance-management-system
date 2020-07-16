@@ -52,14 +52,14 @@ input{
 }
 </style>
      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-     <div class="search-container">
+     <div class="search-container" style="margin-top:5px">
               <form action="/action_page.php">
                <input type="text" placeholder="Search.." name="search">
                <button type="submit"><i class="fa fa-search"></i></button>
                </form>
               </div>
               <form class="registered_teacher_form" action=<?php echo base_url('index.php/admin/registered_users/teachers');?> method = "post">
-     <div class="row">
+     <div class="row" style="margin-top:350px;">
               
                                 <div class="form-group col-md-4 select">
                                         <label for="inputState"><b>Department</b></label>
@@ -112,6 +112,7 @@ input{
          </table>
           </div>
      </main>
+     <?php $this->load->view('footer.php') ?>
 </body>
 
 </html>

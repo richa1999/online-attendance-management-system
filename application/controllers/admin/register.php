@@ -91,6 +91,7 @@ class Register extends CI_Controller{
             echo "<script>alert('Registered Successfully');history.go(-1);</script>";
             $this->load->view('admin/register');
 		}
-	}
+    }
+   
 }
     

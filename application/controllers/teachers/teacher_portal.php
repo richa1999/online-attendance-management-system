@@ -8,6 +8,6 @@ class Teacher_portal extends CI_Controller {
     }
 	public function index()
 	{
-		$this->load->view('teachers/dashboard');
+		$this->load->view('teachers/attendance');
 	}
 }

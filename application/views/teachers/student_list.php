@@ -1,4 +1,4 @@
-<?php $this->load->view('admin/header') ?>
+<?php $this->load->view('teachers/header') ?>
 <style>
 .search-container button {
   float: right;
@@ -53,14 +53,14 @@ input{
 }
 </style>
      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-     <div class="search-container" style="margin-top:5px">
+     <div class="search-container">
               <form action="/action_page.php">
-               <input type="text" placeholder="Search.." name="search" id="input">
+               <input type="text" placeholder="Search.." name="search">
                <button type="submit"><i class="fa fa-search"></i></button>
                </form>
               </div>
-              <form class="registered_student_form" action=<?php echo base_url('index.php/admin/registered_users/students');?> method = "post">
-                 <div class="row" style="margin-top:350px;">
+              <form class="registered_student_form" action=<?php echo base_url('index.php/teachers/registered_users/students');?> method = "post">
+              <div class="row" style="margin-top:350px;">
                                     <div class="select" style=" width: 350px">
                                         <label for="course"><b> Course</b></label>
                                         <select id="course" class="form-control" name="course">
@@ -107,11 +107,11 @@ input{
                                         </select>
                                     </div>  
                  </div>                        
-               <button class="btn btn-primary btn-sm showList" type="submit">Search</button>
-        
+               <button class="btn btn-primary btn-sm showList" type="submit">Submit</button>
+          </div>
           </form>
           <div class="table_responsive">
-             <table class = "table table-bordered" >
+             <table class = "table table-bordered">
              <tr>
                  <th>Name</th>
                  <th>Mobile</th>

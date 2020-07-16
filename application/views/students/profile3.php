@@ -63,6 +63,6 @@
 		</div>
 		
 	</div>
-
+	<?php $this->load->view('footer.php') ?>
 </body>
 </html>

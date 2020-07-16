@@ -58,7 +58,7 @@ input{
                </form>
               </div>
               <form class="registered_teacher_form" action=<?php echo base_url('index.php/admin/registered_users/hod');?> method = "post">
-     <div class="row">
+     <div class="row" style="margin-top:350px;">
               
                                 <div class="form-group col-md-4 select">
                                         <label for="inputState"><b>Department</b></label>
@@ -80,6 +80,7 @@ input{
           <div class="table_responsive">
              <table class = "table table-bordered">
              <tr>
+                 <th> </th>
                  <th>Name</th>
                  <th>Mobile</th>
                  <th>Gender</th>
@@ -93,6 +94,7 @@ input{
                {
                     ?>
                        <tr>
+                       <td><input type="checkbox" name="name1"/></td>
                          <td><?php echo $row->name; ?></td>
                          <td><?php echo $row->mobile; ?></td>
                          <td><?php echo $row->gender; ?></td>
@@ -113,6 +115,7 @@ input{
          </table>
           </div>
      </main>
+     <?php $this->load->view('footer.php') ?>
 </body>
 
 </html>

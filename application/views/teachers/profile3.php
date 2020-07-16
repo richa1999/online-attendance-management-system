@@ -1,3 +1,4 @@
+<!-- <?php $this->load->view('students/header') ?> -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,30 +19,35 @@
                
                   </div>
                    <ul class="list-group list-group-flush">
-                     <a href="<?php echo base_url('index.php/students/profile/profile3');?>" class="list-group-item acclink">Profile</a>
-                     <a href="<?php echo base_url('index.php/students/profile/profile2');?>" class="list-group-item acclink">Account</a>
-                     <a href="#" class="list-group-item acclink1">Log Out</a>
+                     <a href="<?php echo base_url('index.php/teachers/profile');?>" class="list-group-item acclink">Profile</a>
+                     <a href="<?php echo base_url('index.php/teachers/profile/change_password');?>" class="list-group-item acclink">Account</a>
+                     <a href="<?php echo base_url('index.php/teachers/teacher_portal');?>" class="list-group-item acclink1">Back</a>
                    </ul>                   
                 </div>
 			</div>
 			<div class="col">
-				<h1 id="account">Account</h1>
-				<p id="acc">Edit your account settings and change your password here.</p>
+				<h1 id="account">My Profile</h1>
+				<p id="acc">Here are your personal details.No changes can be done here!!</p>
 				<hr>
 				<form>
+				<?php
+                   foreach($fetch_data->result() as $row)
+               {
+                    ?>
 				  <div class="form-group mt-5">
-				    <label for="exampleInputEmail1">Email address</label>
-				    <p id="id">jainvartika2707@gmail.com</p>
-				    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				    <label for="name">Your Name:</label>
+				    <p class="id"><?php echo $row->name; ?></p>
+				     <label for="gender">Gender:</label>
+				    <p class="id"><?php echo $row->gender; ?></p>
+				     <label for="number">Mobile no.</label>
+				    <p class="id"><?php echo $row->mobile; ?></p>
+				     <label for="course">Course:</label>
+				    <p class="id"><?php echo $row->course; ?></p>
+				     <label for="branch">Department:</label>
+				    <p class="id"><?php echo $row->dept; ?></p>
 				  </div>
 				  <hr>
-				  <div class="form-group">
-				    <label for="exampleInputPassword1">Password</label>
-				    <input type="password" class="form-control mb-3" id="exampleInputPassword1" placeholder="Enter Current Password">
-				     <input type="password" class="form-control mb-3" id="exampleInputPassword1"  placeholder="Enter New Password">
-				      <input type="password" class="form-control mb-3" id="exampleInputPassword1"  placeholder="Re-Enter New Password">
-				  </div>
-				  <button type="submit" class="btn btn-danger">Change Password</button>
+			   <?php } ?>
 				</form>
 
 			</div>

@@ -14,13 +14,13 @@
 				<div class="card" style="width: 18rem;">
                   <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title"style="text-align: center;">VARTIKA JAIN</h5>
+                    <h5 class="card-title"style="text-align: center;"><?php echo $this->session->userdata('name');?></h5>
                
                   </div>
                    <ul class="list-group list-group-flush">
-                     <a href="<?php echo base_url('index.php/students/profile/profile3');?>" class="list-group-item acclink">Profile</a>
-                     <a href="<?php echo base_url('index.php/students/profile/profile2');?>" class="list-group-item acclink">Account</a>
-                     <a href="#" class="list-group-item acclink1">Log Out</a>
+                     <a href="<?php echo base_url('index.php/teachers/profile');?>" class="list-group-item acclink">Profile</a>
+                     <a href="<?php echo base_url('index.php/teachers/profile/change_password');?>" class="list-group-item acclink">Account</a>
+                     <a href="<?php echo base_url('index.php/teachers/teacher_portal');?>" class="list-group-item acclink1">Back</a>
                    </ul>                   
                 </div>
 			</div>
@@ -28,18 +28,17 @@
 				<h1 id="account">Account</h1>
 				<p id="acc">Edit your account settings and change your password here.</p>
 				<hr>
-				<form>
+				<form action =<?php echo base_url('index.php/teachers/profile/change_password');?> method = "post">
 				  <div class="form-group mt-5">
 				    <label for="exampleInputEmail1">Email address</label>
-				    <p id="id">jainvartika2707@gmail.com</p>
+				    <p id="id"><?php echo $this->session->userdata('username');?></p>
 				    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 				  </div>
 				  <hr>
 				  <div class="form-group">
 				    <label for="exampleInputPassword1">Password</label>
-				    <input type="password" class="form-control mb-3" id="exampleInputPassword1" placeholder="Enter Current Password">
-				     <input type="password" class="form-control mb-3" id="exampleInputPassword1"  placeholder="Enter New Password">
-				      <input type="password" class="form-control mb-3" id="exampleInputPassword1"  placeholder="Re-Enter New Password">
+				    <input type="password" class="form-control mb-3" id="exampleInputPassword1" name = "cur_psw" placeholder="Enter Current Password">
+				     <input type="password" class="form-control mb-3" id="exampleInputPassword1"  name = "new_psw" placeholder="Enter New Password">
 				  </div>
 				  <button type="submit" class="btn btn-danger">Change Password</button>
 				</form>
